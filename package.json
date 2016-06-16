@@ -1,0 +1,29 @@
+{
+  "name": "playing-cards",
+  "version": "0.0.1",
+  "description": "A playing cards module.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha src/test/index.test.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pevargas/playing-cards.git"
+  },
+  "keywords": [
+    "playing",
+    "cards",
+    "deck",
+    "games"
+  ],
+  "author": "Patrick E. Vargas <patrick@yesthisispatrick.com> (http://www.yesthisispatrick.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pevargas/playing-cards/issues"
+  },
+  "homepage": "https://github.com/pevargas/playing-cards#readme",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.5.3"
+  }
+}
