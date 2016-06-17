@@ -1,9 +1,9 @@
-'use strict';
+'use strict'
 
-var Card = require('./card.js');
+var Card = require('./card.js')
 
-var Deck = function() {
-  this.drawPile = [new Card("Fuck", "You")];
+var Deck = function () {
+  this.drawPile = [new Card('Fuck', 'You')]
 }
 
-module.exports = Deck;
+module.exports = Deck

@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "commit": "git-cz",
-    "test": "mocha src/test/index.test.js",
-    "watch:test": "mocha src/test/index.test.js -w",
+    "test": "snazzy && mocha src/test/index.test.js",
+    "watch:test": "snazzy && mocha src/test/index.test.js -w",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -30,11 +30,16 @@
     "commitizen": "2.8.2",
     "cz-conventional-changelog": "1.1.6",
     "mocha": "2.5.3",
-    "semantic-release": "4.3.5"
+    "semantic-release": "4.3.5",
+    "snazzy": "4.0.0",
+    "standard": "7.1.2"
   },
   "config": {
-    "commitizen": {      
+    "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
     }
+  },
+  "standard": {
+    "globals": [ "describe", "it"]
   }
 }
