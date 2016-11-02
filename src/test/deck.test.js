@@ -56,12 +56,26 @@ describe('discard', function () {
     expect(deck.discardPile).to.have.length.of(numDiscard + 1)
   })
 
-  it('should have the origainl numer of cards after one draw and one discard', function () {
+  it('should have the orignal number of cards after one draw and one discard', function () {
     var deck = new Deck(STANDARD)
     var total = STANDARD.ranks.length * STANDARD.suits.length + STANDARD.jokers.length
     var card = deck.draw()
     deck.discard(card)
     var newTotal = deck.discardPile.length + deck.drawPile.length
     expect(newTotal).to.equal(total)
+  })
+})
+
+describe('shuffle', function () {
+  it('should combine the draw and discard piles', function () {
+    var deck = new Deck(STANDARD)
+    var check = new Deck(STANDARD)
+    deck.shuffle()
+
+    console.log(check.drawPile)
+    console.log('==============================')
+    console.log(deck.drawPile)
+
+    expect(deck.drawPile).to.not.equal(check.drawPile)
   })
 })

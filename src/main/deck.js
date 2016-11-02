@@ -37,4 +37,16 @@ Deck.prototype.discard = function (card) {
   this.discardPile.push(card)
 }
 
+Deck.prototype.shuffle = function () {
+  var newPile = []
+  this.discardPile.concat(this.drawPile)
+  while (this.discardPile.length > 0) {
+    var index = Math.floor(Math.random() * (this.discardPile.length))
+    newPile.push(this.discardPile[index].flip)
+    this.discardPile.splice(index, 1)
+  }
+
+  this.drawPile = newPile
+}
+
 module.exports = Deck
